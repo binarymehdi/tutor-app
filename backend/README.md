@@ -7,6 +7,7 @@ This README provides an overview of the folder structure for our Django-based tu
 ## Project Structure
 
 backend/  # Django project's root directory
+
     ├── api/  # Backend API application
     ├── config/  # Configuration directory
     ├── courses/  # App for managing courses
