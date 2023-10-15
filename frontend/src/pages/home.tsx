@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar';  // Ensure the path is correct
+import Navbar from '../components/layout/navbar';  // Ensure the path is correct
 
 const Home: React.FC = () => {
     return (

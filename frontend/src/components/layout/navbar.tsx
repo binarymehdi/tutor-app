@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
         <nav className="bg-white p-4 shadow-lg">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-blue-700 text-2xl font-bold">
-                    <span className="text-blue-500">My</span> App
+                    <span className="text-blue-500">Tutoring</span> App
                 </div>
                 <ul className="flex space-x-4">
                     <li>
