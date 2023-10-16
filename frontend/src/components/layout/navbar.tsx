@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
                 <ul className="flex space-x-4">
                     <li>
                         <a
-                            href="#"
+                            href="/home"
                             className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
                         >
                             Home
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="/about"
                             className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
                         >
                             About
@@ -26,15 +26,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
-                            className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
-                        >
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
+                            href="Contact"
                             className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
                         >
                             Contact
