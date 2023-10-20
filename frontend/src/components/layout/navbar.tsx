@@ -2,47 +2,53 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="bg-white p-4 shadow-lg">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="text-blue-700 text-2xl font-bold">
-                    <span className="text-blue-500">Tutoring</span> App
-                </div>
-                <ul className="flex space-x-4">
-                    <li>
-                        <a
-                            href="/home"
-                            className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="/about"
-                            className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="Contact"
-                            className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <div className="flex items-center">
-                    <button className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out">
-                        Sign In
-                    </button>
-                    <button className="bg-blue-500 text-white hover:bg-blue-600 ml-4 py-2 px-6 rounded-full transition duration-300 ease-in-out">
-                        Sign Up
-                    </button>
-                </div>
+        <nav
+            style={{
+                display: 'inline-flex',
+                padding: '19px 30px',
+                alignItems: 'center',
+                gap: '84px',
+                backgroundColor: 'white',
+                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                borderRadius: '50px',
+                maxWidth: '800px',
+                margin: '0 auto',
+            }}
+        >
+            {/* Left Section */}
+            <div className="flex space-x-4">
+                <NavItem to="/home">Home</NavItem>
+                <NavItem to="/schools">Schools</NavItem>
+                <NavItem to="/contact">Contact</NavItem>
+            </div>
+
+            {/* Center Section (Logo) */}
+            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#64aef2' }}>
+                Tutor App
+            </div>
+
+            {/* Right Section */}
+            <div className="flex space-x-4">
+                <NavItem to="/about">About</NavItem>
+                <button className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out">
+                    Sign In
+                </button>
+                <button className="bg-blue-500 text-white hover:bg-blue-600 py-2 px-6 rounded-full transition duration-300 ease-in-out">
+                    Sign Up
+                </button>
             </div>
         </nav>
+    );
+};
+
+const NavItem: React.FC<{ to: string }> = ({ to, children }) => {
+    return (
+        <a
+            href={to}
+            className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out"
+        >
+            {children}
+        </a>
     );
 };
 
