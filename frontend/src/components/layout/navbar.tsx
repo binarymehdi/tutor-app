@@ -4,31 +4,34 @@ const Navbar: React.FC = () => {
     return (
         <nav
             style={{
-                display: 'inline-flex',
-                padding: '19px 30px',
+                display: 'flex',
                 alignItems: 'center',
-                gap: '84px',
+                gap: '20px',
                 backgroundColor: 'white',
                 boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
                 borderRadius: '50px',
-                maxWidth: '800px',
-                margin: '0 auto',
+                maxWidth: 'calc(100% - 240px)',
+                margin: '10px 120px', 
+                padding: '15px 30px',
             }}
         >
-            {/* Left Section */}
-            <div className="flex space-x-4">
+            <div className="hidden md:flex space-x-4">
                 <NavItem to="/home">Home</NavItem>
                 <NavItem to="/schools">Schools</NavItem>
                 <NavItem to="/contact">Contact</NavItem>
             </div>
-
-            {/* Center Section (Logo) */}
-            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#64aef2' }}>
+            <div
+                style={{
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                    color: '#64aef2',
+                    flex: 1,
+                    textAlign: 'center',
+                }}
+            >
                 Tutor App
             </div>
-
-            {/* Right Section */}
-            <div className="flex space-x-4">
+            <div className="hidden md:flex space-x-4">
                 <NavItem to="/about">About</NavItem>
                 <button className="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out">
                     Sign In
