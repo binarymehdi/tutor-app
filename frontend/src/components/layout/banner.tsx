@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 
 const WelcomeBanner: React.FC = () => {
+  const swiperRef = useRef(null);
+
   useEffect(() => {
-    new Swiper(".swiper-container", {
+    swiperRef.current = new Swiper(".swiper-container", {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 10,
@@ -12,7 +14,23 @@ const WelcomeBanner: React.FC = () => {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
     });
+
+    const autoSlide = () => {
+      swiperRef.current.slideNext();
+      setTimeout(autoSlide, 3000);
+    };
+
+    autoSlide();
+
+    return () => {
+      swiperRef.current.destroy(true, true);
+    };
   }, []);
 
   return (
@@ -20,7 +38,7 @@ const WelcomeBanner: React.FC = () => {
       <div className="swiper-wrapper">
         <div className="swiper-slide">
           <img
-            src="/src/Assets/pic3.jpeg"
+            src="/src/Assets/pic1.jpeg"
             alt="Image 1"
             style={{ width: "100%", height: "auto" }}
           />
@@ -33,7 +51,18 @@ const WelcomeBanner: React.FC = () => {
           />
         </div>
         <div className="swiper-slide">
-          <img src="/src/Assets/pic1.jpeg" alt="Image 3" style={{ width: "100%", height: "auto" }}/>
+          <img
+            src="/src/Assets/pic3.jpeg"
+            alt="Image 4"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        <div className="swiper-slide">
+          <img
+            src="/src/Assets/pic4.jpeg"
+            alt="Image 3"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       </div>
       <div className="swiper-button-next"></div>
