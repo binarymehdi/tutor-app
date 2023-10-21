@@ -20,20 +20,23 @@ const WelcomeBanner: React.FC = () => {
       <div className="swiper-wrapper">
         <div className="swiper-slide">
           <img
-            src="/src/Assets/pic3.jpeg" 
+            src="/src/Assets/pic3.jpeg"
             alt="Image 1"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div className="swiper-slide">
           <img
             src="/src/Assets/pic2.jpeg"
             alt="Image 2"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div className="swiper-slide">
           <img
             src="/src/Assets/pic1.jpeg"
             alt="Image 3"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
       </div>
@@ -43,8 +46,8 @@ const WelcomeBanner: React.FC = () => {
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-4">Welcome to Tutoring App</h1>
           <p className="text-lg">
-            Get the help you need for your studies. Join our community of student
-            tutors!
+            Get the help you need for your studies. Join our community of
+            student tutors!
           </p>
         </div>
       </div>
