@@ -20,19 +20,19 @@ const WelcomeBanner: React.FC = () => {
       <div className="swiper-wrapper">
         <div className="swiper-slide">
           <img
-            src="/image1.jpg" 
+            src="/src/Assets/pic3.jpeg" 
             alt="Image 1"
           />
         </div>
         <div className="swiper-slide">
           <img
-            src="/image2.jpg"
+            src="/src/Assets/pic2.jpeg"
             alt="Image 2"
           />
         </div>
         <div className="swiper-slide">
           <img
-            src="/image3.jpg"
+            src="/src/Assets/pic1.jpeg"
             alt="Image 3"
           />
         </div>
