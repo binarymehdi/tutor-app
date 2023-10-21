@@ -33,11 +33,7 @@ const WelcomeBanner: React.FC = () => {
           />
         </div>
         <div className="swiper-slide">
-          <img
-            src="/src/Assets/pic1.jpeg"
-            alt="Image 3"
-            style={{ width: "100%", height: "auto" }}
-          />
+          <img src="/src/Assets/pic1.jpeg" alt="Image 3" style={{ width: "100%", height: "auto" }}/>
         </div>
       </div>
       <div className="swiper-button-next"></div>
