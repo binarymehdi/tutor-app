@@ -1,19 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
+import "./WelcomeBanner.css";
+
+const images = [
+  "/src/Assets/pic1.jpeg",
+  "/src/Assets/pic2.jpeg",
+  "/src/Assets/pic3.jpeg",
+  "/src/Assets/pic4.jpeg",
+];
 
 const WelcomeBanner: React.FC = () => {
   const swiperRef = useRef(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     swiperRef.current = new Swiper(".swiper-container", {
       loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      effect: "fade", // Use the fade effect
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -21,9 +25,13 @@ const WelcomeBanner: React.FC = () => {
       speed: 1000,
     });
 
+    swiperRef.current.on("slideChange", () => {
+      setCurrentImageIndex(swiperRef.current.activeIndex);
+    });
+
     const autoSlide = () => {
       swiperRef.current.slideNext();
-      setTimeout(autoSlide, 3000);
+      setTimeout(autoSlide, 6000);
     };
 
     autoSlide();
@@ -34,45 +42,36 @@ const WelcomeBanner: React.FC = () => {
   }, []);
 
   return (
-    <div className="swiper-container">
-      <div className="swiper-wrapper">
-        <div className="swiper-slide">
-          <img
-            src="/src/Assets/pic1.jpeg"
-            alt="Image 1"
-            style={{ width: "100%", height: "auto" }}
-          />
+    <div className="welcome-banner" style={{ position: "relative" }}>
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`swiper-slide ${
+                index === currentImageIndex ? "active" : ""
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          ))}
         </div>
-        <div className="swiper-slide">
-          <img
-            src="/src/Assets/pic2.jpeg"
-            alt="Image 2"
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div>
-        <div className="swiper-slide">
-          <img
-            src="/src/Assets/pic3.jpeg"
-            alt="Image 4"
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div>
-        <div className="swiper-slide">
-          <img
-            src="/src/Assets/pic4.jpeg"
-            alt="Image 3"
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </div>
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
-      <div className="bg-blue-900 text-white p-4">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Tutoring App</h1>
-          <p className="text-lg">
-            Get the help you need for your studies. Join our community of
-            student tutors!
+      <div
+        className="static-text"
+        style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}
+      >
+        <div className="container mx-auto text-white">
+          <h1 className="welcome-title">Empower Rural Education</h1>
+          <p className="welcome-description">
+            Join our mission to support countryside schools and inspire the next
+            generation of learners.
           </p>
         </div>
       </div>
