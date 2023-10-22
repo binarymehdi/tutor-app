@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/layout/navbar';  // Ensure the path is correct
+import Footer from '../components/layout/footer';
 
 const Home: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
 
     );
