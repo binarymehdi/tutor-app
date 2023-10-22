@@ -8,12 +8,24 @@ const Navbar: React.FC = () => {
                     <span className="text-blue-300">Tutoring</span> App
                 </div>
                 <ul className="flex space-x-6">
-                    <NavItem to="/home">Home</NavItem>
-                    <NavItem to="/tutoring">Tutoring Services</NavItem>
-                    <NavItem to="/about">About Us</NavItem>
-                    <NavItem to="/how">How It Works</NavItem>
-                    <NavItem to="/faq">FAQ</NavItem>
-                    <NavItem to="/contact">Contact</NavItem>
+                    <a href="/home" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        Home
+                    </a>
+                    <a href="/tutoring" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        Tutoring Services
+                    </a>
+                    <a href="/about" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        About Us
+                    </a>
+                    <a href="/how" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        How It Works
+                    </a>
+                    <a href="/faq" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        FAQ
+                    </a>
+                    <a href="/contact" className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
+                        Contact
+                    </a>
                 </ul>
                 <div className="flex items-center space-x-4">
                     <button className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out">
@@ -25,17 +37,6 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
         </nav>
-    );
-};
-
-const NavItem: React.FC<{ to: string }> = ({ to, children }) => {
-    return (
-        <a
-            href={to}
-            className="text-blue-300 hover:text-blue-100 transition duration-300 ease-in-out"
-        >
-            {children}
-        </a>
     );
 };
 

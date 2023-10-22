@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import "./WelcomeBanner.css";
 
-const images = [
+const images: string[] = [
   "/src/Assets/pic1.jpeg",
   "/src/Assets/pic2.jpeg",
   "/src/Assets/pic3.jpeg",
@@ -11,13 +10,17 @@ const images = [
 ];
 
 const WelcomeBanner: React.FC = () => {
-  const swiperRef = useRef(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const swiperRef = useRef<Swiper | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.destroy(true, true);
+    }
+
     swiperRef.current = new Swiper(".swiper-container", {
       loop: true,
-      effect: "fade", // Use the fade effect
+      effect: "fade",
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -26,25 +29,27 @@ const WelcomeBanner: React.FC = () => {
     });
 
     swiperRef.current.on("slideChange", () => {
-      setCurrentImageIndex(swiperRef.current.activeIndex);
+      setCurrentImageIndex(swiperRef.current?.activeIndex || 0);
     });
 
     const autoSlide = () => {
-      swiperRef.current.slideNext();
+      swiperRef.current?.slideNext();
       setTimeout(autoSlide, 6000);
     };
 
     autoSlide();
 
     return () => {
-      swiperRef.current.destroy(true, true);
+      if (swiperRef.current) {
+        swiperRef.current.destroy(true, true);
+      }
     };
   }, []);
 
   return (
-    <div className="welcome-banner" style={{ position: "relative" }}>
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
+    <div className="welcome-banner relative h-screen">
+      <div className="swiper-container h-full">
+        <div className="swiper-wrapper h-full">
           {images.map((image, index) => (
             <div
               key={index}
@@ -52,26 +57,24 @@ const WelcomeBanner: React.FC = () => {
                 index === currentImageIndex ? "active" : ""
               }`}
             >
-              <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                style={{ width: "100%", height: "auto" }}
-              />
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${image})` }}
+              ></div>
             </div>
           ))}
         </div>
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
       </div>
-      <div
-        className="static-text"
-        style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}
-      >
-        <div className="container mx-auto text-white">
-          <h1 className="welcome-title">Empower Rural Education</h1>
-          <p className="welcome-description">
-            Join our mission to support countryside schools and inspire the next
-            generation of learners.
+      <div className="static-text absolute top-0 left-0 h-full w-full flex items-center justify-center text-white">
+        <div className="text-center">
+          <h1 className="welcome-title text-3xl md:text-4xl lg:text-5xl mb-4">
+            Empower Rural Education
+          </h1>
+          <p className="welcome-description text-lg md:text-xl lg:text-2xl">
+            Join our mission to support countryside schools and inspire the
+            next generation of learners.
           </p>
         </div>
       </div>
