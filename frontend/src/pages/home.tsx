@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from '../components/layout/navbar';
-import WelcomeBanner from '../components/layout/banner'; // Import the WelcomeBanner component
+import WelcomeBanner from '../components/layout/banner';
 
 const Home: React.FC = () => {
     return (
         <div className="flex flex-col h-screen bg-white">
             <Navbar />
-            <WelcomeBanner /> {/* Include the WelcomeBanner component */}
+            <WelcomeBanner />
             <div className="flex-grow flex justify-center items-center">
                 <div className="bg-white p-8 rounded-xl shadow-md max-w-xl text-center">
                     <h1 className="text-2xl mb-4 font-bold text-blue-500">
