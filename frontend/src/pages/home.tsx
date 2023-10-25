@@ -4,10 +4,11 @@ import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Home", href: "#home" },
+  { name: "Tutoring Services", href: "#tutoring" },
+  { name: "About", href: "#about" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const Home: React.FC = () => {
