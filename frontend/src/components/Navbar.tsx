@@ -25,13 +25,12 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+          <a href="#home" className="-m-1.5 p-1.5">
+            <span className="sr-only">Tutor App</span>
+            <span className="text-4xl font-bold tracking-tight text-blue-600">
+              Tutor
+            </span>{" "}
+            <span className="text-4xl font-bold tracking-tight">App</span>
           </a>
         </div>
         {/* Mobile Menu Button */}
