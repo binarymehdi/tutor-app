@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; {/*Still to be fixed, the page doesn't appear*/}
 
 const About: React.FC = () => {
   return (
