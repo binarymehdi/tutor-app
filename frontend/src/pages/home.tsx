@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "#home" },
