@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "#home" },
   { name: "Tutoring Services", href: "#tutoring" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
   { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
