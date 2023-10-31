@@ -3,11 +3,11 @@ CREATE DATABASE tutoring_db;
 
 CREATE TABLE session (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
     description TEXT,
-    session_status VARCHAR(255) NOT NULL,
-    start_time DATE NOT NULL,
-    end_time DATE NOT NULL,
+    session_status VARCHAR(255) ,
+    start_time DATE ,
+    end_time DATE ,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
 );

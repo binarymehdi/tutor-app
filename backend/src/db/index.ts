@@ -1,12 +1,11 @@
-// connecting the db to the sever with pool
-import { Pool } from 'pg';
+// const Pool = require("pg").Pool;
+import { Pool } from "pg";
+
+require('dotenv').config({ path: __dirname + '/.env' }); // .env file is on the same dir
+
+const { DATABASE_URL } = process.env;
 
 const pool = new Pool({
-    user: 'postgres',
-    password: 'Mehdi0507',
-    host: 'localhost',
-    port: 5432,
-    database: 'tutoring_db',
+    connectionString: DATABASE_URL,
 });
-
 export default pool;
