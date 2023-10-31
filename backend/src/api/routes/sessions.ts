@@ -6,5 +6,4 @@ router
     .route('/')
     .post(getSessions);
 
-
 export default router;
