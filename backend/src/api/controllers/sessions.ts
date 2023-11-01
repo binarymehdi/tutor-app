@@ -3,27 +3,54 @@ import pool from "../../db/index";
 // get a session
 
 // get all sessions
-const getSessions = async (req: Request, res: Response) => {
+const addSession = async (req: Request, res: Response) => {
     try {
         const { description } = req.body;
-        const newTodo = await pool.query(
+        const newSession = await pool.query(
             "INSERT INTO session (description) VALUES($1) RETURNING *",
             [description]
         );
 
-        res.json(newTodo.rows[0]);
+        res.json(newSession.rows[0]);
+        return newSession;
     } catch (error) {
         console.error((error as Error).message);
     }
 };
 
-// create a session
-
 // update a session
+const updateSession = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const { description } = req.body;
+        const updatedSession = await pool.query(
+            "UPDATE session SET description = $1 WHERE id = $2",
+            [description, id]
+        );
+        res.json("Session was updated!");
+        return updatedSession;
+    } catch (error) {
+        console.error((error as Error).message);
+    }
+};
 
 // delete a session
-
+const deleteSession = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const deletedSession = await pool.query(
+            "DELETE FROM session WHERE id = $1",
+            [id]
+        );
+        res.json("Session was deleted!");
+        return deletedSession;
+    } catch (error) {
+        console.error((error as Error).message);
+    }
+};
 export {
-    getSessions,
+    addSession,
+    updateSession,
+    deleteSession,
 };
 
