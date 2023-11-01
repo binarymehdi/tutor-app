@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "Tutoring Services", href: "#tutoring" },
+  { name: "Home", href: "/" },
+  { name: "Tutoring Services", href: "/tutoring" },
   { name: "About", href: "/about" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Home: React.FC = () => {
