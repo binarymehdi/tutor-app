@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
-import { Link } from "react-router-dom";
+import Features from "../components/features";
+import FeaturesBlocks from "../components/features-blocks";
+import Hero from "../components/hero";
+import ModalVideo from "../components/modal-video";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -28,6 +31,8 @@ const Home: React.FC = () => {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <HeroSection />
+      <Features />
+      <FeaturesBlocks />
     </div>
   );
 };
