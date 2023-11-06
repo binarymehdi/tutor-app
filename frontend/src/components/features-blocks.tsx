@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FeaturesBlocks() {
   return (
     <section className="relative">
