@@ -4,8 +4,8 @@ import MobileMenu from "../components/MobileMenu";
 import HeroSection from "../components/HeroSection";
 import Features from "../components/features";
 import FeaturesBlocks from "../components/features-blocks";
-import Hero from "../components/hero";
-import ModalVideo from "../components/modal-video";
+import Newsletter from "../components/newsletter";
+import Testimonials from "../components/testimonials";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -32,7 +32,9 @@ const Home: React.FC = () => {
       />
       <HeroSection />
       <Features />
+      <Testimonials />
       <FeaturesBlocks />
+      <Newsletter />
     </div>
   );
 };

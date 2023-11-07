@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ShareExperience = () => {
   const [experience, setExperience] = useState('');
   const maxWords = 150;
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { value: any; }; }) => {
     const text = e.target.value;
     const words = text.split(' ');
     if (words.length <= maxWords) {
@@ -17,7 +17,7 @@ const ShareExperience = () => {
       <h2 className="text-xl font-semibold mb-4">Share Your Experience</h2>
       <textarea
         className="w-full p-2 border rounded-lg resize-none"
-        rows="5"
+        rows={parseInt("5")}
         placeholder={`Share your experience (max ${maxWords} words)`}
         value={experience}
         onChange={handleChange}

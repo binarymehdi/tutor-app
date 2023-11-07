@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Image from 'next/image';
+import ModalVideo from '@/components/modal-video';
 import VideoMP4 from '@/public/videos/video.mp4';
 import VideoThumb from '@/public/images/hero-image.png';
 
