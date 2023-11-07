@@ -1,4 +1,33 @@
-function Testimonials() {
+import React, { useState } from 'react';
+
+const ShareExperience = () => {
+  const [experience, setExperience] = useState('');
+  const maxWords = 150;
+
+  const handleChange = (e) => {
+    const text = e.target.value;
+    const words = text.split(' ');
+    if (words.length <= maxWords) {
+      setExperience(text);
+    }
+  };
+
+  return (
+    <div className="max-w-md mx-auto p-4 border rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold mb-4">Share Your Experience</h2>
+      <textarea
+        className="w-full p-2 border rounded-lg resize-none"
+        rows="5"
+        placeholder={`Share your experience (max ${maxWords} words)`}
+        value={experience}
+        onChange={handleChange}
+      />
+      <p className="text-sm text-gray-500">{experience.split(' ').length}/{maxWords} words</p>
+    </div>
+  );
+};
+
+const Testimonials = () => {
   return (
     <section className="relative">
       {/* Illustration behind content */}
@@ -22,20 +51,17 @@ function Testimonials() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Trusted by over 20,000 companies all over the world</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Share Your Experience</h2>
             <p className="text-lg text-gray-600" data-aos="zoom-y-out">
-              Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit libero cursus mattis.
+            Your feedback helps shape a better tutoring experience for both students and schools.
+            </p>
+            <p className="text-lg text-gray-600" data-aos="zoom-y-out">
+            Let make a real difference!
             </p>
           </div>
 
-          {/* Items */}
-          <div className="max-w-full md:max-w-4xl mx-auto grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-            {[...Array(5)].map((_, index) => (
-              <div key={index} className="flex items-center justify-center py-2 md:py-4 col-span-1">
-                {/* Your content here */}
-              </div>
-            ))}
-          </div>
+          {/* Share Your Experience */}
+          <ShareExperience />
 
           {/* Testimonials */}
           <div className="max-w-3xl mx-auto mt-20" data-aos="zoom-y-out">
