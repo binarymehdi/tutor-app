@@ -9,7 +9,7 @@ export default function Features() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Empower Rural Education</h1>
             <p className="text-base sm:text-lg text-gray-600">
-            Our mission is to support countryside schools and inspire the next generation of learners.
+            Our mission is to support countryside schools and inspire the next generation of learners
             </p>
           </div>
 
