@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <HeroSection />
-      <ModalVideo />
+      <ModalVideo thumb={""} thumbWidth={0} thumbHeight={0} thumbAlt={""} video={""} videoWidth={0} videoHeight={0} />
       <Hero />
       <Features />
       <Testimonials />
