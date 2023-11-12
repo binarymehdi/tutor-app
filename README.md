@@ -7,8 +7,3 @@ Tutor App is a platform designed for AUI students to volunteer as tutors in rura
 
 ## Badges
 - [MIT License](https://github.com/binarymehdi/tutor-app/blob/master/LICENSE)
-
-## Authors
-- [@El mehdi Laidoudi](https://github.com/binarymehdi)
-- [@Karima Touhami](https://github.com/KarimaTouhami)
-- [@Abdelhadi Marjane](https://github.com/sadowb)
