@@ -8,13 +8,15 @@ function App() {
 
   return (
     <>
+    <div className="p-{4%}">
+      <Header/>
+      </div>
       <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path = "/About" element= {<About />} />
       </Routes>
-      <Header/>
 
     </>
   )

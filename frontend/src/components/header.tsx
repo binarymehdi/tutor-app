@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-// import Header from '../components/ui/header'
+
 
 const navigation = [
   { name: 'About', href: '/about' },
@@ -42,14 +42,17 @@ const header = () => {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/Login" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-          <a href="Signup" className="text-sm font-semibold leading-6 text-gray-900">
-           SignUp<span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+  <button className="text-black-700 hover:text-blue-500 transition duration-300 ease-in-out mr-2">
+    <a href="/Login">Login</a>
+  </button>
+ <button className=" hover:text-blue-500 transition duration-300 ease-in-out ml-2  rounded text-xl px-4 py-2">
+  <a href="/SignUp" className="rounded-md bg-indigo-600 px-4 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  SignUp
+                </a>
+</button>
+</div>
+       
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50" />
@@ -93,10 +96,10 @@ const header = () => {
                   Log in
                 </a>
                 <a
-                  href="#"
+                  href="/Signup"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Sign Up
                 </a>
               </div>
             </div>

@@ -15,7 +15,6 @@ export default function Example() {
 
   return (
     <div className="bg-white">
-      <Header />
      
 
       <div className="relative isolate px-6 pt-14 lg:px-8">

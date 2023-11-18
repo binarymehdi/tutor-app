@@ -1,9 +1,10 @@
-import Footer from "../components/footer";
+
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen bg-white p-4">
-      <div className="flex-1">
+    <div className="flex flex-col items-center justify-center px-6 py-10000 mx-auto md:h-screen lg:py-0 ">
+      
+      <div className="flex-1 mt-32">
         <header className="text-center">
           <h1 className="text-3xl font-bold mb-4 text-gray-800">About Our Mission</h1>
           <p className="text-gray-600">
@@ -44,7 +45,6 @@ export default function About() {
           </p>
         </section>
       </div>
-      <Footer />
     </div>
   );
 }
