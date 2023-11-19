@@ -11,7 +11,7 @@ const Home = () => {
         </div>
         <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-            <h1 className="text-9xl md:text-7xl font-extrabold leading-tighter tracking-tighter mb-4">Make your website <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">wonderful</span></h1>
+            <h1 className="text-9xl md:text-7xl font-extrabold leading-tighter tracking-tighter mb-4">Azrou <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Aid</span></h1>
             <p className="mt-6 text-3xl leading-8 text-gray-600">
               Facilitating tutoring activities for highschool and middleschool students by Al Akhawayn university students
             </p>
