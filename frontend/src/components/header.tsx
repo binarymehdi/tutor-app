@@ -18,8 +18,8 @@ const header = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              className="h-20  "
+              src="../../public/Universite-Al-Akhawayn-Ifran-Maroc-Logo-Vector.svg-.webp"
               alt=""
             />
           </a>
