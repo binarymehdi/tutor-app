@@ -5,11 +5,11 @@ const login = async function login(req: express.Request, res: express.Response) 
 }
 
 const forgot = async function login(req: express.Request, res: express.Response) {
-    res.send('login');
+    res.send('forgot');
 };
 
 const reset = async function login(req: express.Request, res: express.Response) {
-    res.send('login');
+    res.send('reset');
 }
 
 export {
