@@ -1,26 +1,36 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
+import { useState, useEffect } from 'react';
+import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
-]
+];
 
-const header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsScrolled(offset > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top ? 'bg-white backdrop-blur-sm shadow-lg' : ''}`}>
+    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${isScrolled ? 'bg-white backdrop-blur-sm shadow-lg' : ''}`}>
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img
-              className="h-20  "
+              className="h-20"
               src="../../public/Universite-Al-Akhawayn-Ifran-Maroc-Logo-Vector.svg-.webp"
-              alt=""
+              alt="Logo"
             />
           </a>
         </div>
@@ -45,13 +55,12 @@ const header = () => {
           <button className="text-black-700 hover:text-blue-500 transition duration-300 ease-in-out mr-2">
             <a href="/Login">Login</a>
           </button>
-          <button className=" hover:text-blue-500 transition duration-300 ease-in-out ml-2  rounded text-xl px-4 py-2">
+          <button className="hover:text-blue-500 transition duration-300 ease-in-out ml-2 rounded text-xl px-4 py-2">
             <a href="/SignUp" className="rounded-md bg-indigo-600 px-4 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               SignUp
             </a>
           </button>
         </div>
-
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50" />
@@ -62,7 +71,7 @@ const header = () => {
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                alt="Company Logo"
               />
             </a>
             <button
@@ -106,7 +115,7 @@ const header = () => {
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
-}
+  );
+};
 
-export default header;
+export default Header;
