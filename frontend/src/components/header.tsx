@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
+import Logo from '../assets/logo.jpg';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -28,8 +28,8 @@ const Header = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <img
-              className="h-20"
-              src="../../public/Universite-Al-Akhawayn-Ifran-Maroc-Logo-Vector.svg-.webp"
+              className="h-20 rounded-full"
+              src={Logo}
               alt="Logo"
             />
           </a>

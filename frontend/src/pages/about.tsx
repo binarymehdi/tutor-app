@@ -1,6 +1,4 @@
-
 const About = () => {
-
   return (
     <div className="bg-white">
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -11,12 +9,19 @@ const About = () => {
         <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-9xl md:text-7xl font-extrabold leading-tighter tracking-tighter mb-4">Azrou <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Aid</span></h1>
+            <p className="text-2xl text-gray-800">We are a team of committed students from AUI who want to make an impact on the community.</p>
+            <ul className="mt-8 grid grid-cols-2 gap-4 text-lg text-gray-800">
+              <li className="p-4 bg-gray-100 rounded-lg shadow-md">Chaimae</li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow-md">moubaiki</li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow-md">sanae</li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow-md">monatdir</li>
+              {/* Add more members as needed */}
+            </ul>
           </div>
         </div>
       </div>
     </div>
-
-  )
+  );
 };
 
 export default About;
