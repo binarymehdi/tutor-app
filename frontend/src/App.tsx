@@ -5,12 +5,16 @@ import Home from './pages/home'
 import {Route, Routes} from 'react-router-dom'
 import Header from './components/header'
 import Contact from './pages/contact'
+import Sessions from './components/sessions/Sessions'
+import Tutors from './components/tutors/Tutors'
 function App() {
 
   return (
-    <>
+   <div>
+
+ 
     <div className="p-{4%}">
-      <Header/>
+      {/* <Header/> */}
       </div>
       <Routes> 
         <Route path="/" element={<Home />} />
@@ -18,9 +22,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path = "/Contact" element= {<Contact />} />
         <Route path = "/About" element= {<About />} />
-      </Routes>
-
-    </>
+        <Route path = "/Sessions"element = {<Sessions/>} />
+        <Route path = "/Tutors"element = {<Tutors/>} />
+        </Routes>
+      </div>
   )
 }
 
