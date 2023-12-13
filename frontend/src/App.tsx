@@ -14,7 +14,7 @@ function App() {
 
  
     <div className="p-{4%}">
-      {/* <Header/> */}
+       <Header/> 
       </div>
       <Routes> 
         <Route path="/" element={<Home />} />
