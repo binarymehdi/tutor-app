@@ -1,50 +1,22 @@
 
+const About = () => {
 
-export default function About() {
-    return (
-      <div className="flex flex-col items-center justify-center px-6 py-10000 mx-auto md:h-screen lg:py-0 bg-gray-100">
-        
-        <div className="flex-1 mt-32">
-          <header className="text-center">
-            <h1 className="text-3xl font-bold mb-4 text-gray-800">About Our Mission</h1>
-            <p className="text-gray-600">
-              At Tutoring Services, our primary goal is to empower rural education.
-              We are committed to supporting countryside schools and inspiring the
-              next generation of learners. We strive to provide educational
-              resources and opportunities to students in remote areas, ensuring they
-              have access to quality education and a bright future.
-            </p>
-          </header>
-          <section className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Team</h2>
-            <ul className="list-none">
-              <li className="text-gray-600">Team Member 1</li>
-              <li className="text-gray-600">Team Member 2</li>
-              <li className="text-gray-600">Team Member 3</li>
-            </ul>
-          </section>
-  
-          <section className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Commitment</h2>
-            <p className="text-gray-600">
-              Tutoring Services is committed to bridging the educational gap by
-              providing personalized learning experiences, mentorship, and resources
-              to rural communities. We believe that every student, regardless of
-              their geographical location, deserves a chance to access high-quality
-              education.
-            </p>
-          </section>
-  
-          <section className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Vision</h2>
-            <p className="text-gray-600">
-              Our vision is to create a world where every student in rural areas has
-              the tools, knowledge, and inspiration to succeed. We aim to build a
-              brighter future by fostering a love for learning, encouraging
-              creativity, and empowering students to reach their full potential.
-            </p>
-          </section>
+  return (
+    <div className="bg-white">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)' }}>
+          </div>
+        </div>
+        <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-9xl md:text-7xl font-extrabold leading-tighter tracking-tighter mb-4">Azrou <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Aid</span></h1>
+          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+
+  )
+};
+
+export default About;
