@@ -1,7 +1,7 @@
 import express from 'express';
 
 const login = async function login(req: express.Request, res: express.Response) {
-    res.send('login');
+    // very empty for now
 }
 
 const forgot = async function login(req: express.Request, res: express.Response) {
