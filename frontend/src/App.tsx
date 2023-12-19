@@ -7,15 +7,13 @@ import Header from './components/header'
 import Contact from './pages/contact'
 import Sessions from './components/sessions/Sessions'
 import Tutors from './components/tutors/Tutors'
+import Dashboard from './components/dashboard/Dashboard'
 function App() {
 
   return (
    <div>
 
  
-    <div className="p-{4%}">
-       <Header/> 
-      </div>
       <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login/>} />
@@ -24,6 +22,7 @@ function App() {
         <Route path = "/About" element= {<About />} />
         <Route path = "/Sessions"element = {<Sessions/>} />
         <Route path = "/Tutors"element = {<Tutors/>} />
+        <Route path = "/Dashboard" element = {<Dashboard/>} />
         </Routes>
       </div>
   )

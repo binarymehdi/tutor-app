@@ -1,4 +1,3 @@
-
 import SessionsForm from './sessionsForm'
 
 export default function Sessions() {

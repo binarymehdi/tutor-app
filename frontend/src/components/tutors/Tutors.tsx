@@ -16,9 +16,12 @@ import {
   TableHead,
   TableHeaderCell,
   TableRow,
-  Title,
+  Title,AreaChart, BarChart, Card, Switch
+
 } from "@tremor/react";
 import { useState } from "react";
+import Header from "../header";
+import Dashboard from "../dashboard/Dashboard";
 
 export type Tutor = {
   name: string;
@@ -130,6 +133,7 @@ export default function Tutors() {
         </TableBody>
       </Table>
       </div>
+      
       </div>
     </>
   );
